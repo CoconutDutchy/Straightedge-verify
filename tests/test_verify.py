@@ -1,10 +1,12 @@
+# Copyright 2026 Order of Operation
+# SPDX-License-Identifier: Apache-2.0
 import copy
 import json
 import pathlib
 
 import pytest
 
-import plexi_verify as pv
+import straightedge_verify as pv
 
 FIXTURE = pathlib.Path(__file__).parent / "fixtures" / "credit_memo_log.json"
 
@@ -23,7 +25,7 @@ def rehash_from(events, start):
         prev = ev["immutable_hash"]
 
 
-def test_real_plexi_log_is_intact(log):
+def test_real_straightedge_log_is_intact(log):
     assert len(log) == 16
     assert pv.verify_log(log) == []
 
