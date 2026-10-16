@@ -1,4 +1,4 @@
-# Copyright 2026 Order of Operation
+# Copyright 2026 Fronson Dinkelaar, trading as Order of Operation
 # SPDX-License-Identifier: Apache-2.0
 import copy
 import json

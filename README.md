@@ -51,4 +51,4 @@ Apache License 2.0. See [LICENSE](LICENSE).
 
 ---
 
-Copyright 2026 Order of Operation. Licensed under the Apache License 2.0; see [LICENSE](LICENSE) and [NOTICE](NOTICE).
+Copyright 2026 Fronson Dinkelaar, trading as Order of Operation. Licensed under the Apache License 2.0; see [LICENSE](LICENSE) and [NOTICE](NOTICE).

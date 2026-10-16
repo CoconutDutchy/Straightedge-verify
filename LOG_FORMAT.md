@@ -37,4 +37,4 @@ Editing, deleting, inserting or reordering any event breaks one of these rules. 
 
 ---
 
-Copyright 2026 Order of Operation. Licensed under the Apache License 2.0.
+Copyright 2026 Fronson Dinkelaar, trading as Order of Operation. Licensed under the Apache License 2.0.
