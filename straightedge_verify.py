@@ -1,14 +1,16 @@
+# Copyright 2026 Fronson Dinkelaar, trading as Order of Operation
+# SPDX-License-Identifier: Apache-2.0
 """
-plexi-verify: check a Plexi audit log for tampering, without trusting Plexi.
+straightedge-verify: check a Straightedge audit log for tampering, without trusting Straightedge.
 
-A Plexi audit log is a JSON array of events. Each event carries a SHA-256
+A Straightedge audit log is a JSON array of events. Each event carries a SHA-256
 hash over its own fields and the hash of the event before it, so editing,
 deleting, inserting or reordering any event breaks the chain. See
 LOG_FORMAT.md for the exact format.
 
 Usage:
-    python plexi_verify.py audit_log.json
-    python plexi_verify.py audit_log.json --head <last event hash you were given>
+    python straightedge_verify.py audit_log.json
+    python straightedge_verify.py audit_log.json --head <last event hash you were given>
 
 Exit code 0 means the log is intact, 1 means problems were found, 2 means the
 file could not be read.
@@ -100,7 +102,7 @@ def head_hash(events: List[Dict[str, Any]]) -> str:
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="Check a Plexi audit log for tampering.")
+    parser = argparse.ArgumentParser(description="Check a Straightedge audit log for tampering.")
     parser.add_argument("log", help="path to the audit log JSON file ('-' for stdin)")
     parser.add_argument("--head", help="the last event hash you were given, to detect removed events at the end")
     parser.add_argument("--version", action="version", version=__version__)

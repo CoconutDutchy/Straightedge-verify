@@ -1,6 +1,6 @@
-# Plexi audit log format, version 1
+# Straightedge audit log format, version 1
 
-A Plexi audit log is a JSON array of event objects, oldest first. Each event records one thing that happened to an AI analysis job: it was created or refused, it moved to a new step, evidence or a result was added, a reviewer approved it, and so on.
+A Straightedge audit log is a JSON array of event objects, oldest first. Each event records one thing that happened to an AI analysis job: it was created or refused, it moved to a new step, evidence or a result was added, a reviewer approved it, and so on.
 
 ## Event fields
 
@@ -34,3 +34,7 @@ Readers should ignore event types they don't recognise; the chain still verifies
 - No two events share an `event_id`.
 
 Editing, deleting, inserting or reordering any event breaks one of these rules. Two changes the chain alone cannot show are cutting events off the end and rewriting the whole chain from some point onwards. To catch both, keep the hash of the last event (the head) whenever you receive or publish a log, and later check that the head is still in the log.
+
+---
+
+Copyright 2026 Fronson Dinkelaar, trading as Order of Operation. Licensed under the Apache License 2.0.
